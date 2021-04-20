@@ -1,0 +1,45 @@
+
+class Animal:
+	def __init__(self, age,weight,name):
+		self.age=age
+		self.weight=weight
+		self.name=name
+
+	class Bird(Animal):
+
+		def __init__(self, age, weight, name, wings, size,life):
+			self.age=age
+			self.weight=weight
+			self.name=name
+			self.wings=wings
+			self.size=size
+			self.life=life # booléen
+
+		def __str__(self):
+			return "I am a bird of "+str(self.weight()) +"kg."
+
+		def gettingolder(self):
+			self.age+=1
+			if (self.age > 5):
+				self.life=false #il est mort
+
+	class Mammal(Animal):
+
+		def __init__(self, age,weight,name,paws,tail ):
+			self.age=age
+			self.weight=weight
+			self.name=name
+			self.paws=paws
+			self.tail=tail
+
+		def __str__(self):
+			return "I am a mammal of "+str(self.name()) +"years old"
+
+		def quantityoffood (self):
+			return "he should eat about " str(self.weight()/30) "kg of food each day"
+
+
+
+giraffe=Mammal(15,242,'gigi',4,100)
+macaw=Bird(4,2,'rio',70,70, true)
+mustang=Animal(12,342,'petit tonnerre')
